@@ -21,7 +21,7 @@ function hourUpdate() {
 })
 
 
- // Color code for past, present or future
+ // Color code to display different color for past, present and future
  $(".time-block").each(function() {
    var timeblockHour = parseInt($(this).attr("id").split("-")[0]);
    
