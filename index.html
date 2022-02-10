@@ -1,110 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="icon" href='https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Calendar_icon_2.svg/989px-Calendar_icon_2.svg.png'>
-    
-    <title>Planner</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./Assets/styles.css" />
+  <title>Work Day Scheduler</title>
 </head>
 
 <body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="todayDay" class="lead"></p>
+    <button id="resetDay">Click here to clear Scheduler</button>
+  </header>
 
-    <header class="jumbotron">
+  <!-- Timeblocks go here -->
+  <div class="container">
+    <div class="time-block row" id="9-Timeblock">
+      <div class="col-md-1 hour">9 AM</div>
+      <textarea id="9-text" class="col-md-10"></textarea>
+      <button type="button" class="saveBtn col-md-1" aria-label="Save">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
 
-        <h1 class="display-3">Work Day Scheduler</h1>
-        <p class="lead">A simple calendar app for scheduling your work day</p>
-        <p id="currentDay" class="lead"></p>
-        <p id="currentTime" class="lead"></p>
-        <button id="resetDay">click here to clear your day</button>
+    <div class="time-block row" id="10-Timeblock">
+      <div class="col-md-1 hour">10 AM</div>
+      <textarea id="10-text" class="col-md-10"></textarea>
+      <button type="button" class="saveBtn col-md-1" aria-label="Save">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
 
-      </header>
+    <div class="time-block row" id="11-Timeblock">
+      <div class="col-md-1 hour">11 AM</div>
+      <textarea id="11-text" class="col-md-10"></textarea>
+      <button type="button" class="saveBtn col-md-1" aria-label="Save">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
+    <div class="time-block row" id="12-Timeblock">
+      <div class="col-md-1 hour">12 PM</div>
+      <textarea id="12-text" class="col-md-10"></textarea>
+      <button type="button" class="saveBtn col-md-1" aria-label="Save">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
+    <div class="time-block row" id="13-Timeblock">
+      <div class="col-md-1 hour">1 PM</div>
+      <textarea id="13-text" class="col-md-10"></textarea>
+      <button type="button" class="saveBtn col-md-1" aria-label="Save">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
 
-      <div>
+    <div class="time-block row" id="14-Timeblock">
+      <div class="col-md-1 hour">2 PM</div>
+      <textarea id="14-text" class="col-md-10"></textarea>
+      <button type="button" class="saveBtn col-md-1" aria-label="Save">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
 
-        <!-- each <li> is a seperate hour in the calender -->
-        <ul class="container-fluid cal-content">
+    <div class="time-block row" id="15-Timeblock">
+      <div class="col-md-1 hour">3 PM</div>
+      <textarea id="15-text" class="col-md-10"></textarea>
+      <button type="button" class="saveBtn col-md-1" aria-label="Save">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
+    <div class="time-block row" id="16-Timeblock">
+      <div class="col-md-1 hour">4 PM</div>
+      <textarea class="col-md-10"></textarea>
+      <button id="16-text" type="button" class="saveBtn col-md-1" aria-label="Save">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
 
-          <li>
-            <label for="9am" name="9" class="col-md-1 time-stamp" >9am</label>
-            <textarea id="9am" class="col-md-9 area-def" ></textarea>
-            <button type="submit" name="saveButton" class="col-md-1 btn">✅</button>
-          </li>
+    <div class="time-block row" id="17-Timeblock">
+      <div class="col-md-1 hour">5 PM</div>
+      <textarea id="17-text" class="col-md-10"></textarea>
+      <button type="button" class="saveBtn col-md-1" aria-label="Save">
+        <i class="far fa-save"></i>
+      </button>
+    </div>
 
-          <li>
-            <label for="10am" name="10" class="col-md-1 time-stamp" >10am</label>
-            <textarea id="10am" class="col-md-9 area-def" ></textarea>
-            <button type="submit" name="saveButton" class="col-md-1 btn">✅</button>
-          </li>
+  </div>
+  
 
-          <li>
-            <label for="11am" name="11" class="col-md-1 time-stamp" >11am</label>
-            <textarea id="11am" class="col-md-9 area-def" ></textarea>
-            <button type="submit" name="saveButton" class="col-md-1 btn">✅</button>
-          </li>
+ 
 
-          <li>
-            <label for="12pm" name="12" class="col-md-1 time-stamp" >12pm</label>
-            <textarea id="12pm" class="col-md-9 area-def" ></textarea>
-            <button type="submit" name="saveButton" class="col-md-1 btn">✅</button>
-          </li>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-          <li>
-            <label for="1pm" name="13" class="col-md-1 time-stamp" >1pm</label>
-            <textarea id="1pm" class="col-md-9 area-def" ></textarea>
-            <button type="submit" name="saveButton" class="col-md-1 btn">✅</button>
-          </li>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-          <li>
-            <label for="2pm" name="14" class="col-md-1 time-stamp" >2pm</label>
-            <textarea id="2pm" class="col-md-9 area-def" ></textarea>
-            <button type="submit" name="saveButton" class="col-md-1 btn">✅</button>
-          </li>
+  <script src="./Assets/script.js"></script>
 
-          <li>
-            <label for="3pm" name="15" class="col-md-1 time-stamp" >3pm</label>
-            <textarea id="3pm" class="col-md-9 area-def" ></textarea>
-            <button type="submit" name="saveButton" class="col-md-1 btn">✅</button>
-          </li>
-          
-          <li>
-            <label for="4pm" name="16" class="col-md-1 time-stamp" >4pm</label>
-            <textarea id="4pm" class="col-md-9 area-def" ></textarea>
-            <button type="submit" name="saveButton" class="col-md-1 btn">✅</button>
-          </li>
-          
-          <li>
-            <label for="5pm" name="17" class="col-md-1 time-stamp" >5pm</label>
-            <textarea id="5pm" class="col-md-9 area-def" ></textarea>
-            <button type="submit" name="saveButton" class="col-md-1 btn">✅</button>
-          </li>
-          
-        </ul>
 
-      </div>
+
 
 </body>
-
-<!-- linked scripts. -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="assets/js/scripts.js"></script>
 
 </html>
