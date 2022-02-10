@@ -16,7 +16,7 @@ function hourUpdate() {
         location.reload();
         console.log("Welcome to a new working day 🌞");
     } else {
-        console.log("Have a blessed day!");
+        console.log("Have a blessed day ahead!");
     }
 })
 
